@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>学生健康申报</title>
+    <style>
+       
+        form {
+        /* 居中表单 */
+        margin: 0 auto;
+        width: 400px;
+        /* 显示表单的轮廓 */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+        }
+        label {
+            /* 确保所有label大小相同并正确对齐 */
+            display: inline-block;
+            width: 140px;
+            text-align: right;
+            }
+        input, textarea {
+            /* 确保所有文本输入框字体相同
+                textarea默认是等宽字体 */
+            font: 1em sans-serif;
+
+            /* 使所有文本输入框大小相同 */
+            width: 300px;
+            box-sizing: border-box;
+
+            /* 调整文本输入框的边框样式 */
+            border: 1px solid #999;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <form>
+        <p>学生健康申报</p>
+        <label for="myDate">登记时间：</label>
+        <input type="date" name="myDate" min="2020-6-27" max="2020-12-30" id="myDate" required>
+        <label for="myName">填表人姓名：</label>
+        <input type="text" name="myName" id="myName" required>
+        <label for="myNub">填表人学号：</label>
+        <input type="text" name="myNub" id="myNub" required>
+        <label for="tel">填表人联系方式：</label>
+        <input type="tel" id="tel" name="tel" required>
+        <label for="major">所在院系：</label>
+        <input type="text" name="major" id="major" required><br>
+        <span>培养层次</span>
+          <select id="train" name="train" required >
+            <option>本科生</option>
+            <option>研究生</option>
+            <option>博士生</option>
+          </select>
+        <p>籍贯</p>
+        <fieldset>
+            <p>
+              <input type="radio" name="size" id="size_1" value="内地"  required>
+              <label for="size_1">内地</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_2" value="港澳台籍" required>
+              <label for="size_2">港澳台籍</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_3" value="外籍" required>
+              <label for="size_3">外籍</label>
+            </p>
+          </fieldset>
+    
+          <p>曾到访省份</p>
+          <fieldset>
+                <label for="guangdong">广东省</label>
+                <input type="checkbox" checked id="guangdong" name="place" value="guangdong">
+              
+                <label for="hubei">湖北省</label>
+                <input type="checkbox" id="hubei" name="place" value="hubei">
+              
+                <label for="zhejiang">浙江</label>
+                <input type="checkbox" id="zhejiang" name="place" value="zhejiang">
+                <label for="henan">河南</label>
+                <input type="checkbox" id="henan" name="place" value="henan">
+          </fieldset>
+          <div>
+            <button>提交</button>
+          </div>
+</form>
+  </body>
+</html>
